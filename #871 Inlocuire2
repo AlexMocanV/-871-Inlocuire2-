@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,p=1,x,y,z,uc;
+    cin>>n>>x>>y;
+    if(n==0&&n==x)
+    {
+        cout<<y;
+    }
+    else
+    {
+    while(n!=0)
+    {
+        uc=n%10;
+        if(uc==x)
+        {
+            uc=y;
+        }
+        z=z+uc*p;
+        p=p*10;
+        n=n/10;
+    }
+    cout<<z;
+    }
+    return 0;
+}
